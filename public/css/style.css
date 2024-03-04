@@ -5,21 +5,35 @@
   font-family: "Roboto", sans-serif;
 }
 
+.dflex {
+  display: flex;
+}
+
+.dnone {
+  display: none;
+}
+
+.w50 {
+  width: 50%;
+}
+
 .container {
   display: flex;
   align-items: center;
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
   justify-content: space-between;
 }
 
 header {
   width: 100%;
-  padding: 15px;
   box-shadow: 0px -3px 11px 1px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 0px -3px 11px 1px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px -3px 11px 1px rgba(0, 0, 0, 0.75);
   background-color: #2eabab;
+}
+header .container {
+  padding: 15px;
 }
 header h1 {
   color: white;
@@ -76,17 +90,19 @@ section.content .text-content .verse-container {
   flex-direction: column;
 }
 section.content .text-content .verse-container .verse-content {
-  font-size: 17px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 300;
   color: #3f3f3f;
   letter-spacing: normal;
-  font-family: "Merriweather", serif;
 }
 section.content .text-content .verse-container .verse-content .verse-number {
   font-size: 12px;
   color: #828282;
   margin-right: 2px;
   vertical-align: super;
+  font-family: "Merriweather", serif;
+}
+section.content .text-content .verse-container .verse-content .verse-text {
   font-family: "Merriweather", serif;
 }
 section.content .chapters {

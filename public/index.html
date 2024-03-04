@@ -8,22 +8,104 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/books.css">
 </head>
 <body>
     <header>
         <div class="container">
             <h1>Biblia online</h1>
             <nav class="menu-desktop">
-                <button><a href="./index.html">Home</a></button>
-                <button><a href="./books.html">Livros</a></button>
-                <button><a href="">Bíblias</a></button>
+                <button><a href="./index.html">Início</a></button>
+                <button class="btn-books"><a href="#">Livros</a></button>
+                <button class="btn-bibles"><a href="">Bíblias</a></button>
+                
             </nav>
+        </div>
+        <div class="books-content dnone">
+            <div class="books-container">
+                <div class="old-testament">
+                    <h4 class="text-testament">Antigo testamento</h4>
+                    <ul>
+                        <li class="book-single">Gênesis</li>
+                        <li class="book-single">Êxodo</li>
+                        <li class="book-single">Levítico</li>
+                        <li class="book-single">Numeros</li>
+                        <li class="book-single">Deuteronômio</li>
+                        <li class="book-single">Josué</li>
+                        <li class="book-single">Juízes</li>
+                        <li class="book-single">Rute</li>
+                        <li class="book-single">1 Samuel</li>
+                        <li class="book-single">2 Samuel</li>
+                        <li class="book-single">1 Reis</li>
+                        <li class="book-single">2 Reis</li>
+                        <li class="book-single">1 Crônicas</li>
+                        <li class="book-single">2 Crônicas</li>
+                        <li class="book-single">Esdras</li>
+                        <li class="book-single">Neemias</li>
+                        <li class="book-single">Ester</li>
+                        <li class="book-single">Jó</li>
+                        <li class="book-single">Salmos</li>
+                        <li class="book-single">Provérbios</li>
+                        <li class="book-single">Eclesiastes</li>
+                        <li class="book-single">Cânticos dos Cânticos</li>
+                        <li class="book-single">Isaías</li>
+                        <li class="book-single">Jeremias</li>
+                        <li class="book-single">Lamentações</li>
+                        <li class="book-single">Ezequiel</li>
+                        <li class="book-single">Daniel</li>
+                        <li class="book-single">Oséias</li>
+                        <li class="book-single">Joel</li>
+                        <li class="book-single">Amós</li>
+                        <li class="book-single">Obadias</li>
+                        <li class="book-single">Jonas</li>
+                        <li class="book-single">Miquéias</li>
+                        <li class="book-single">Naum</li>
+                        <li class="book-single">Habacuque</li>
+                        <li class="book-single">Sofonias</li>
+                        <li class="book-single">Ageu</li>
+                        <li class="book-single">Zacarias</li>
+                        <li class="book-single">Malaquias</li>
+                    </ul>
+                </div>
+                <div class="new-testament">
+                    <h4 class="text-testament">Novo testamento</h4>
+                    <ul>
+                        <li class="book-single">Mateus</li>
+                        <li class="book-single">Marcos</li>
+                        <li class="book-single">Lucas</li>
+                        <li class="book-single">João</li>
+                        <li class="book-single">Atos</li>
+                        <li class="book-single">Romanos</li>
+                        <li class="book-single">1 Coríntios</li>
+                        <li class="book-single">2 Coríntios</li>
+                        <li class="book-single">Gálatas</li>
+                        <li class="book-single">Efésios</li>
+                        <li class="book-single">Filipenses</li>
+                        <li class="book-single">Colossenses</li>
+                        <li class="book-single">1 Tessalonicenses</li>
+                        <li class="book-single">2 Tessalonicenses</li>
+                        <li class="book-single">1 Timóteo</li>
+                        <li class="book-single">2 Timóteo</li>
+                        <li class="book-single">Tito</li>
+                        <li class="book-single">Filemom</li>
+                        <li class="book-single">Hebreus</li>
+                        <li class="book-single">Tiago</li>
+                        <li class="book-single">1 Pedro</li>
+                        <li class="book-single">2 Pedro</li>
+                        <li class="book-single">1 João</li>
+                        <li class="book-single">2 João</li>
+                        <li class="book-single">3 João</li>
+                        <li class="book-single">Judas</li>
+                        <li class="book-single">Apocalipse</li>                                
+                    </ul>
+                </div>
+            </div>
         </div>
     </header>
     <section class="content">
         <div class="container">
             <div class="text-content">
-                <p class="book-name"><span class="verse"></span></p>
+                <p class="book-name"></p>
                 <div class="verse-container"><!--adicionado dinamicamente--></div>
             </div>
             <div class="chapters">
