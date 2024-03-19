@@ -1,3 +1,84 @@
+header .menu-desktop .btn-books .focusBtn {
+  background-color: white;
+}
+header .menu-desktop .btn-books .focusBtn a {
+  color: #2eabab;
+}
+header .menu-desktop .btn-books .books-content {
+  width: 100%;
+  height: 80vh;
+  position: absolute;
+  left: 0;
+  top: 4.1em;
+  background-color: #fff;
+  box-shadow: 0px 3px 11px 1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 3px 11px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 3px 11px 1px rgba(0, 0, 0, 0.75);
+}
+header .books-content {
+  background-color: white;
+}
+header .books-container {
+  width: 100%;
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-content: space-between;
+  text-align: left;
+}
+header .books-container .old-testament {
+  width: 50%;
+}
+header .books-container .new-testament {
+  width: 50%;
+}
+header .books-container .text-testament {
+  font-size: 1.2em;
+  padding: 5px 0;
+}
+header .books-container ul {
+  width: 100%;
+  display: grid;
+  color: black;
+  line-height: 2em;
+  grid-auto-flow: column;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: repeat(20, 1fr);
+}
+header .books-container ul li {
+  cursor: pointer;
+  font-size: 1.2em;
+  list-style: none;
+  color: #2eabab;
+  font-family: "Roboto", sans-serif;
+}
+
+@media (max-width: 768px) {
+  header .books-container {
+    align-items: flex-start;
+  }
+  header .books-container ul {
+    grid-auto-flow: row;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+  }
+}
+@media (max-width: 580px) {
+  header .books-container {
+    padding: 20px 2%;
+    text-align: center;
+  }
+}
+@media (max-width: 375px) {
+  header .books-container .text-testament {
+    font-size: 1.1em;
+  }
+  header .books-container ul li {
+    font-size: 1.1em;
+  }
+}
 * {
   margin: 0;
   padding: 0;

@@ -4,14 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass":"sass --watch src/sass/:public/css/",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "sass src/sass:src/css/ && webpack"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bible.js": "^4.0.2",
     "sass": "^1.71.1"
+  },
+  "devDependencies": {
+    "css-loader": "^6.10.0",
+    "node-sass": "^9.0.0",
+    "sass-loader": "^14.1.1",
+    "style-loader": "^3.3.4",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.4.2",
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4"
   }
 }
