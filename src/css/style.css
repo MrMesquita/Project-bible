@@ -186,22 +186,6 @@ section.content .text-content .verse-container .verse-content .verse-number {
 section.content .text-content .verse-container .verse-content .verse-text {
   font-family: "Merriweather", serif;
 }
-section.content .text-content .btns-prev-next {
-  width: 100%;
-  display: flex;
-  margin-top: 1.5em;
-  justify-content: space-around;
-}
-section.content .text-content .btns-prev-next button {
-  cursor: pointer;
-  border: none;
-  color: white;
-  font-size: 1.1em;
-  font-weight: 500;
-  border-radius: 8em;
-  padding: 10px 20px;
-  background: #35bfbf;
-}
 section.content .chapters {
   width: 35%;
   color: #4a4949;
