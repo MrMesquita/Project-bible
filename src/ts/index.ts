@@ -25,7 +25,7 @@ const verseContainer: HTMLElement | null = document.querySelector('.verse-contai
 const chaptersContainer: HTMLElement | null = document.querySelector('.chapters-numbers-container');
 let translation: string = 'almeida';
 let bookName: string = 'Gênesis';
-let bookChapter: string = '1';
+let bookChapter: number = 1;
 
 async function fetchBible(): Promise<void> {
     const response: Response = await fetch(`https://bible-api.com/${bookName}${bookChapter}?translation=${translation}`);
@@ -87,7 +87,7 @@ function createChapterNumber(chapterNumber: number): void {
         li.textContent = chapterNumber.toString();
 
         li.addEventListener('click', () => {
-            bookChapter = chapterNumber.toString();
+            bookChapter = chapterNumber;
             if (verseContainer) verseContainer.textContent = '';
             if (chaptersContainer) chaptersContainer.textContent = '';
             fetchBible();
@@ -114,6 +114,28 @@ function toggleBooksContainer(): void {
     }
 }
 
+function nextChapter(){
+    if (bookChapter === manyChaptersBookHas[bookName]){
+        alert('Você está no ultimo capitulo')
+    }else{
+        if (verseContainer) verseContainer.textContent = '';
+        if (chaptersContainer) chaptersContainer.textContent = '';
+        bookChapter++
+        fetchBible()
+    }
+}
+
+function previousChapter(){
+    if (bookChapter === 1){
+        alert('Você está no primeiro capitulo')
+    }else{
+        if (verseContainer) verseContainer.textContent = '';
+        if (chaptersContainer) chaptersContainer.textContent = '';
+        bookChapter--
+        fetchBible()
+    }
+}
+
 document.querySelectorAll('.book-single').forEach((book) => {
     book.addEventListener('click', (ev) => {
         if (verseContainer) verseContainer.textContent = '';
@@ -122,6 +144,7 @@ document.querySelectorAll('.book-single').forEach((book) => {
         const target = ev.currentTarget;
         if (target instanceof HTMLElement) {
             bookName = target.textContent || '';
+            bookChapter = 1
             fetchBible();
             toggleBooksContainer();
         }
@@ -132,3 +155,6 @@ const btnBooks: HTMLElement | null = document.querySelector('.btn-books');
 if (btnBooks) btnBooks.addEventListener('click', toggleBooksContainer);
 
 document.addEventListener('DOMContentLoaded', fetchBible);
+document.getElementById('previous')?.addEventListener('click', previousChapter)
+document.getElementById('next')?.addEventListener('click', nextChapter)
+
